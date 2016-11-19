@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/bin/minecraft-start
+
+tail -f /dev/null
