@@ -4,7 +4,7 @@ FROM centos:latest
 RUN yum install -y java-1.8.0-openjdk-headless wget
 
 
-COPY minecraft /minecraft
+#COPY minecraft /minecraft
 COPY bin /bin
 RUN mkdir -p /minecraft/logs
 
