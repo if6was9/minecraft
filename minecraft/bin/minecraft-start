@@ -1,0 +1,13 @@
+#!/bin/bash -x
+
+. /minecraft/bin/minecraft-env
+
+
+mkdir -p ${MINECRAFT_DATA}
+#pkill -ef minecraft_server
+
+cd ${MINECRAFT_DATA}
+
+echo "eula=true" >${MINECRAFT_DATA}/eula.txt
+java -Xmx1g -jar ${MINECRAFT_JAR} 2>&1 
+
