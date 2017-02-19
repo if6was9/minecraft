@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 
-RUN apk update && apk add bash
+RUN apk update && apk add bash && apk add openssl
 
 COPY minecraft /minecraft
 
