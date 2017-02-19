@@ -5,7 +5,9 @@ RUN apk update && apk add bash
 COPY minecraft /minecraft
 
 RUN mkdir -p /minecraft/logs && mkdir -p /minecraft/bin
-RUN chmod +x /minecraft/bin/minecraft-start
+RUN chmod +x /minecraft/bin/*
+
+RUN /minecraft/bin/minecraft-install && rm /minecraft/bin/minecraft-install
 
 EXPOSE 25565
 
