@@ -1,0 +1,11 @@
+#!/bin/bash
+
+MINECRAFT_DATA=${MINECRAFT_DATA-"/minecraft/data"}
+
+mkdir -p ${MINECRAFT_DATA}
+
+
+cd $MINECRAFT_DATA
+echo "eula=true" >${MINECRAFT_DATA}/eula.txt
+
+exec java -Xmx1g -jar /minecraft/bin/server.jar nogui

@@ -1,9 +1,0 @@
-#!/bin/bash
-
-
-. /minecraft/bin/minecraft-env
-
-
-if [ ! -f "${MINECRAFT_JAR}" ]; then
-wget https://s3.amazonaws.com/Minecraft.Download/versions/${MINECRAFT_VERSION}/minecraft_server.${MINECRAFT_VERSION}.jar -O ${MINECRAFT_JAR}
-fi
