@@ -2,18 +2,16 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
     steps:
-      uses: docker/build-push-action@v1
-      with:
+      - uses: docker/build-push-action@v1
+      - with:
         username: if6was9
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
         repository: if6was9/minecraft-test
