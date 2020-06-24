@@ -2,8 +2,9 @@
 
 MINECRAFT_DATA=${MINECRAFT_DATA-"/minecraft/data"}
 
+if [ ! -d "$MINECRAFT_DATA" ]; then
 mkdir -p ${MINECRAFT_DATA}
-
+fi
 
 cd $MINECRAFT_DATA
 echo "eula=true" >${MINECRAFT_DATA}/eula.txt
