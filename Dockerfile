@@ -1,4 +1,4 @@
-FROM openjdk:8-alpine
+FROM adoptopenjdk/openjdk11:alpine-slim
 
 RUN apk update && apk add bash curl jq openssl
 
